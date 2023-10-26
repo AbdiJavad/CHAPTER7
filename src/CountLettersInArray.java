@@ -1,7 +1,5 @@
 public class CountLettersInArray {
-    /**
-     * Main method
-     */
+    /** Main method*/
     public static void main(String[] args) {
         // Declare and create an array
         char[] chars = createArray();
@@ -18,9 +16,7 @@ public class CountLettersInArray {
         displayCounts(counts);
     }
 
-    /**
-     * Create an array of characters
-     */
+    /*** Create an array of characters*/
     public static char[] createArray() {
         // Declare an array of characters and create it
         char[] chars = new char[100];
@@ -28,16 +24,15 @@ public class CountLettersInArray {
         // Create lowercase letters randomly and assign
         // them to the array
 
-         for (int i = 0; i < chars.length; i++)
-              chars[i] = RandomCharacter.getRandomLowerCaseLetter();
+
+        for (int i = 0; i < chars.length; i++)
+              chars[i] =RandomCharacter.getRandomLowerCaseLetter();
 
          // Return the array
         return chars;
      }
 
-    /**
-     * Display the array of characters
-     */
+    /*** Display the array of characters*/
     public static void displayArray(char[] chars) {
         // Display the characters in the array 20 on each line
         for (int i = 0; i < chars.length; i++) {
@@ -56,8 +51,7 @@ public class CountLettersInArray {
         int[] counts = new int[26];
 
         // For each lowercase letter in the array, count it
-        for (int i = 0; i < chars.length; i++)
-            counts[chars[i] - 'a']++;
+        for (char aChar : chars) counts[aChar - 'a']++;
 
         return counts;
     }
